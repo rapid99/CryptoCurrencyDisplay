@@ -38,13 +38,11 @@
 
 .ethereum {
     margin-left: 77px;
-    
 }
 
 #ethereum_logo {
     width: 300px;
     height: 270px;
-    padding-bottom: 90px;
 }
 
 .litecoin {
@@ -57,25 +55,23 @@
     height: 150px;
 }
 
+.change {
+    text-align: center;
+    font-size: 28px;
+}
+
+.arrow {
+    height: 50px;
+    width: 50px;
+}
+
+#downArrow {
+    margin-right: 15px;
+}
+
 #jsGrid {
     clear: both;
     margin-left: 90px;
     margin-top: 90px;
     font-size: 18px;
-}
-
-p {
-    font-size: 12px;
-    margin-left: 90px;
-}
-
-#updateTime {
-    color: blue;
-    font-weight: bold;
-} 
-
-#footer {
-    text-align: center;
-    margin-top: 150px;
-    font-size: 12px;
 }

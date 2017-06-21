@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Bitcoin";
 }
 
 <script src="https://code.jquery.com/jquery-3.2.1.js"
@@ -23,23 +23,39 @@
                 var eurRate = res.price.eur.toFixed(2);
                 $("tr:nth-child(3)>td:nth-child(3)").text("€" + eurRate);
 
+                //ETH
+                var ethRate = res.price.eth.toFixed(2);
+                $("tr:nth-child(4)>td:nth-child(3)").text(ethRate);
 
-                //var updateTime = document.getElementById("updateTime");
-                //updateTime.innerHTML = res.time.updated;
+                //Change rate
+                var rate = res.change;
+                var change = document.getElementById("changeRate");
+                change.innerHTML = rate;
+
+                if (rate > 0) {
+                    change.style.color = "green";
+                    var down = document.getElementById("downArrow");
+                    down.style.visibility = 'hidden'
+                } else {
+                    change.style.color = "red";
+                    var up = document.getElementById("upArrow");
+                    up.style.visibility = 'hidden'
+                }
             });
         };
         getData();
 
         var data = [
-            { "Currency": "Bitcoin", "Code": "USD", "Rate": "" },
-            { "Currency": "Bitcoin", "Code": "GBP", "Rate": "" },
-            { "Currency": "Bitcoin", "Code": "EUR", "Rate": "" }
+            { "Currency": "Bitcoin", "Code": "USD (United States Dollar)", "Rate": "" },
+            { "Currency": "Bitcoin", "Code": "GBP (Great Britain Pound)", "Rate": "" },
+            { "Currency": "Bitcoin", "Code": "EUR (Euro)", "Rate": "" },
+            { "Currency": "Bitcoin", "Code": "ETH (Ethereum)", "Rate": "" }
         ];
 
 
         $("#jsGrid").jsGrid({
             width: "90%",
-            height: "235px",
+            height: "285px",
 
 
             inserting: false,
@@ -70,7 +86,7 @@
 
     <div class="currencies">
         <div class="bitcoin col-lg-3">
-            <img src="~/images/bitcoin-logo.png" alt="bitcoin logo" id="bitcoin_logo" style="border:7px inset green;"/>
+            <img src="~/images/bitcoin-logo.png" alt="bitcoin logo" id="bitcoin_logo" style="background-color: rgba(230, 255, 0, 0.4);" />
         </div>
         <div class="ethereum col-lg-3">
             <a href="@Url.Action("Ethereum", "Home")">
@@ -88,12 +104,6 @@
 
     </div>
 
-    @*<div class="update">
-        <p class="time">Updated at: <span id="updateTime" class="time"></span></p>
-    </div>*@
-
-
-@*<hr />
-<footer id="footer">
-    <p id="disclaimer"></p>
-</footer>*@
+    <div class="change">
+        <p>Change: <span id="changeRate"></span> <img id="upArrow" class="arrow" src="~/images/green-up-arrow.png" alt="up" /><img id="downArrow" class="arrow" src="~/images/red_down_arrow.png" alt="down" /></p>
+    </div>
