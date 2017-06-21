@@ -1,0 +1,9 @@
+c:\users\mhyman\documents\visual studio 2017\Projects\CryptoCurrencyDisplay\CryptoCurrencyDisplay\bin\Debug\netcoreapp1.1\CryptoCurrencyDisplay.deps.json
+c:\users\mhyman\documents\visual studio 2017\Projects\CryptoCurrencyDisplay\CryptoCurrencyDisplay\bin\Debug\netcoreapp1.1\CryptoCurrencyDisplay.runtimeconfig.json
+c:\users\mhyman\documents\visual studio 2017\Projects\CryptoCurrencyDisplay\CryptoCurrencyDisplay\bin\Debug\netcoreapp1.1\CryptoCurrencyDisplay.runtimeconfig.dev.json
+c:\users\mhyman\documents\visual studio 2017\Projects\CryptoCurrencyDisplay\CryptoCurrencyDisplay\bin\Debug\netcoreapp1.1\CryptoCurrencyDisplay.dll
+c:\users\mhyman\documents\visual studio 2017\Projects\CryptoCurrencyDisplay\CryptoCurrencyDisplay\bin\Debug\netcoreapp1.1\CryptoCurrencyDisplay.pdb
+c:\users\mhyman\documents\visual studio 2017\Projects\CryptoCurrencyDisplay\CryptoCurrencyDisplay\obj\Debug\netcoreapp1.1\CryptoCurrencyDisplay.csprojResolveAssemblyReference.cache
+c:\users\mhyman\documents\visual studio 2017\Projects\CryptoCurrencyDisplay\CryptoCurrencyDisplay\obj\Debug\netcoreapp1.1\CryptoCurrencyDisplay.AssemblyInfo.cs
+c:\users\mhyman\documents\visual studio 2017\Projects\CryptoCurrencyDisplay\CryptoCurrencyDisplay\obj\Debug\netcoreapp1.1\CryptoCurrencyDisplay.dll
+c:\users\mhyman\documents\visual studio 2017\Projects\CryptoCurrencyDisplay\CryptoCurrencyDisplay\obj\Debug\netcoreapp1.1\CryptoCurrencyDisplay.pdb

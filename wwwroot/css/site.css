@@ -1,0 +1,81 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    height: 90%;
+    width: 90%;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#title {
+    text-align: center;
+    font-weight: bold;
+}
+
+#currencyList {
+    margin-top: 30px;
+}
+
+
+.currencies {
+    padding-top: 70px;
+}
+
+.bitcoin {
+    margin-left: 50px;
+}
+
+#bitcoin_logo {
+    width: 270px;
+    height: 150px;
+}
+
+.ethereum {
+    margin-left: 77px;
+    
+}
+
+#ethereum_logo {
+    width: 300px;
+    height: 270px;
+    padding-bottom: 90px;
+}
+
+.litecoin {
+    margin-left: 77px;
+    margin-right: 77px;
+}
+
+#litecoin_logo {
+    width: 390px;
+    height: 150px;
+}
+
+#jsGrid {
+    clear: both;
+    margin-left: 90px;
+    margin-top: 90px;
+    font-size: 18px;
+}
+
+p {
+    font-size: 12px;
+    margin-left: 90px;
+}
+
+#updateTime {
+    color: blue;
+    font-weight: bold;
+} 
+
+#footer {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 12px;
+}

@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Litecoin";
+}
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        function getData() {
+            $.getJSON("https://coinmarketcap-nexuist.rhcloud.com/api/ltc", function (res) {
+                //USD
+                var usdRate = res.price.usd.toFixed(2);
+                $(".jsgrid-row:first-child>td:nth-child(3)").text("$" + usdRate);
+
+                //GBP
+                var gbpRate = res.price.gbp.toFixed(2);
+                $("tr:nth-child(2)>td:nth-child(3)").text("£" + gbpRate);
+
+                //EUR;
+                var eurRate = res.price.eur.toFixed(2);
+                $("tr:nth-child(3)>td:nth-child(3)").text("€" + eurRate);
+            })
+        };
+        getData();
+
+        var data = [
+            { "Currency": "Litecoin", "Code": "USD", "Rate": "" },
+            { "Currency": "Litecoin", "Code": "GBP", "Rate": "" },
+            { "Currency": "Litecoin", "Code": "EUR", "Rate": "" }
+        ];
+
+
+        $("#jsGrid").jsGrid({
+            width: "90%",
+            height: "235px",
+
+
+            inserting: false,
+            editing: false,
+            sorting: true,
+            paging: true,
+            clearFilterButton: true,
+
+            data: data,
+
+            fields: [
+                { name: "Currency", type: "text", align: "center" },
+                { name: "Code", type: "text", align: "center" },
+                { name: "Rate", type: "number", align: "center" }
+                //{ type: "control" }
+            ]
+
+        });
+
+
+    });
+</script>
+
+<div>
+    <h1 id="title">Crypto Currency Display</h1>
+</div>
+
+
+<div class="currencies">
+    <div class="bitcoin col-lg-3">
+        <a href="@Url.Action("Index", "Home")">
+            <img src="~/images/bitcoin-logo.png" alt="bitcoin logo" id="bitcoin_logo" />
+        </a>
+    </div>
+    <div class="ethereum col-lg-3">
+        <a href="@Url.Action("Ethereum", "Home")">
+            <img src="~/images/ETHEREUM-LOGO.png" alt="ethereum logo" id="ethereum_logo" />
+        </a>
+    </div>
+    <div class="litecoin col-lg-3">
+        <a href="@Url.Action("Litecoin", "Home")">
+            <img src="~/images/litecoin.png" alt="litecoin" id="litecoin_logo" style="border:7px inset green;" />
+        </a>
+    </div>
+</div>
+
+<div id="jsGrid">
+
+</div>
+
+@*<div class="update">
+        <p class="time">Updated at: <span id="updateTime" class="time"></span></p>
+    </div>*@
